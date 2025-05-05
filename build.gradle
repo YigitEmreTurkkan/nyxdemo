@@ -20,7 +20,7 @@ test {
     useJUnitPlatform()
 }
 
-// Basitleştirilmiş Nyx yapılandırması
+// Düzeltilmiş Nyx yapılandırması
 nyx {
     preset = 'conventional-commits'  // Conventional commit formatını kullanacak
     
@@ -31,10 +31,6 @@ nyx {
     
     changelog {
         path = 'CHANGELOG.md'
-    }
-    
-    bump {
-        mode = 'conventional'
     }
     
     releaseLenient = true
