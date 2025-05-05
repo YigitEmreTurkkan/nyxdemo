@@ -20,15 +20,24 @@ test {
     useJUnitPlatform()
 }
 
-// Nyx konfigürasyonu
+// Basitleştirilmiş Nyx yapılandırması
 nyx {
-    preset = 'simple'
-    initialVersion = '0.1.0'
-    releasePrefix = 'v'
+    preset = 'conventional-commits'  // Conventional commit formatını kullanacak
+    
+    version {
+        initial = '0.1.0'
+        prefix = 'v'
+    }
+    
+    changelog {
+        path = 'CHANGELOG.md'
+    }
+    
+    bump {
+        mode = 'conventional'
+    }
+    
     releaseLenient = true
     dryRun = false
     verbosity = 'INFO'
-    git {
-        // Git konfigürasyonu
-    }
 }

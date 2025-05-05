@@ -9,4 +9,13 @@ public class Application {
     public String greet(String name) {
         return String.format("Merhaba, %s!", name);
     }
+    
+    /**
+     * Belirtilen sayının karesini hesaplar
+     * @param number Karesi hesaplanacak sayı
+     * @return Sayının karesi
+     */
+    public int calculateSquare(int number) {
+        return number * number;
+    }
 }
