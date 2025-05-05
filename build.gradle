@@ -20,20 +20,7 @@ test {
     useJUnitPlatform()
 }
 
-// Düzeltilmiş Nyx yapılandırması
+// Nyx yapılandırması
 nyx {
-    preset = 'simple'  // 'conventional-commits' yerine 'simple' kullanıyorum
-    
-    version {
-        initial = '0.1.0'
-        prefix = 'v'
-    }
-    
-    changelog {
-        path = 'CHANGELOG.md'
-    }
-    
-    releaseLenient = true
-    dryRun = false
-    verbosity = 'INFO'
+    preset = 'simple'
 }
