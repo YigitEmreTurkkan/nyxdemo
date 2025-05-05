@@ -1,0 +1,17 @@
+{
+  "preset": "simple",
+  "scheme": "SEMVER",
+  "initialVersion": "0.1.0",
+  "releaseLenient": true,
+  "dryRun": false,
+  "releasePrefix": "v",
+  "releaseTypes": {
+    "enabled": [
+      "mainline"
+    ],
+    "publicationServices": []
+  },
+  "git": {
+    "remotes": []
+  }
+}
