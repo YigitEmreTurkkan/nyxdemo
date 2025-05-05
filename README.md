@@ -1,8 +1,19 @@
-# Nyx Demo Projesi (Gradle)
+# Nyx Demo Project
 
-Bu proje, Nyx'in Gradle plugin'i olarak kullanımını gösterir.
+A simple demonstration project using Nyx for version management.
 
-## Kurulum
+## Setup
+
+This project uses Gradle with the Nyx plugin for automatic versioning.
+
+## Versioning
+
+This project follows semantic versioning principles. Version numbers are automatically generated based on git history and commit messages.
+
+- `feat`: New features trigger a minor version increment
+- `fix`: Bug fixes trigger a patch version increment
+- `chore`: Maintenance tasks usually trigger a patch version increment
+- `BREAKING CHANGE`: Major changes that break compatibility trigger a major version increment
 
 ### Java Sürüm Kontrolü
 
@@ -180,3 +191,11 @@ git init
 git add .
 git commit -m "Initial commit"
 ```
+
+- `nyxClean`: Yerel sürüm eserlerini siler ve sürüm sürecini başlangıç durumuna döndürür
+- `nyxInfer`: Git deposundan bilgi toplayarak yeni sürümü belirler ve sürüm eylemlerini planlar
+- `nyxMake`: Yapılandırılmış yerel sürüm eserlerini oluşturur
+- `nyxMark`: Depoyu etiketleyerek ve commit atarak sürümü işaretler
+- `nyxPublish`: Yeni sürümü uzak servislere yayınlar ve bildirimler gönderir
+- `release`: Tüm sürüm görevlerini çalıştırır.
+
