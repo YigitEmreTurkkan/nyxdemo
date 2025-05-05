@@ -3,7 +3,7 @@
     "scheme": "SEMVER",
     "initialVersion": "0.1.0",
     "releaseLenient": true,
-    "dryRun": false,
+    "dryRun": true,
     "releasePrefix": "v",
     "releaseTypes": {
       "enabled": [
