@@ -148,7 +148,7 @@ nyx {
 
 ## Kullanım
 
-Nyx'i Gradle ile çalıştırmak için:
+Nyx'i Gradle ile çalıştırmak için: .
 
 ```bash
 # Mevcut durum ve versiyon bilgisini görmek için
