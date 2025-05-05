@@ -22,7 +22,7 @@ test {
 
 // Düzeltilmiş Nyx yapılandırması
 nyx {
-    preset = 'conventional-commits'  // Conventional commit formatını kullanacak
+    preset = 'simple'  // 'conventional-commits' yerine 'simple' kullanıyorum
     
     version {
         initial = '0.1.0'
