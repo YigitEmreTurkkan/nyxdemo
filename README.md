@@ -199,3 +199,4 @@ git commit -m "Initial commit"
 - `nyxPublish`: Yeni sürümü uzak servislere yayınlar ve bildirimler gönderir
 - `release`: Tüm sürüm görevlerini çalıştırır.
 
+## Yeni özellikler eklendi
