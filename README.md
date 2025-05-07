@@ -25,7 +25,7 @@ java -version
 Nyx plugin'i Java 17 veya üstünü gerektiriyor. Java 17 yüklemek için:
 
 ```bash
-# Ubuntu/Debian için:
+# Ubuntu/Debian için:.
 sudo apt update
 sudo apt install openjdk-17-jdk
 
