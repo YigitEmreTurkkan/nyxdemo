@@ -202,4 +202,4 @@ git commit -m "Initial commit"
 ## Yeni özellikler eklendi
 docker run -it  --entrypoint  sh -v /home/yigitemreturkkan/Belgeler/GitProject/nyx-demo:/project mooltiverse/nyx 
 
-yeni değişiklikler denemek için bu 
+yeni değişiklikler
