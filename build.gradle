@@ -19,19 +19,3 @@ dependencies {
 test {
     useJUnitPlatform()
 }
-
-// Daha basit Nyx yapılandırması
-nyx {
-    preset = 'simple'
-    releasePrefix = 'v'
-    bump = 'minor'
-    
-    changelog {
-        path = 'CHANGELOG.md'
-    }
-    
-    // Commit mesajlarını tanıma kuralları
-    commitMessageConventions {
-        enabled = ['conventionalCommits']
-    }
-}
