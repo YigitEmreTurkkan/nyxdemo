@@ -200,3 +200,5 @@ git commit -m "Initial commit"
 - `release`: Tüm sürüm görevlerini çalıştırır.
 
 ## Yeni özellikler eklendi
+docker run -it  --entrypoint  sh -v /home/yigitemreturkkan/Belgeler/GitProject/nyx-demo:/project mooltiverse/nyx
+
