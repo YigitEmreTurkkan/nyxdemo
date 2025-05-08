@@ -1,8 +1,10 @@
 # Changelog
 
-## v0.4.0
+## v0.5.0-internal.1+timestamp.20250508125603 (2025-05-08)
 
 ### feat
+
+* [ae470] feat: Yeni kullanıcı kayıt özelliği eklendi... (Yigit Emre TURKKAN)
 
 * [ab224] feat: Yeni kullanıcı kayıt özelliği eklendi...... (Yigit Emre TURKKAN)
 
