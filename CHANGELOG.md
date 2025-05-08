@@ -4,6 +4,8 @@
 
 ### feat
 
+* [2046f] feat: Yeni kullanıcı kayıt özelliği eklendi.. (Yigit Emre TURKKAN)
+
 * [f7f8a] feat: Yeni kullanıcı kayıt özelliği eklendiler (Yigit Emre TURKKAN)
 
 * [ac026] feat: Yeni kullanıcı kayıt özelliği eklendi (Yigit Emre TURKKAN)

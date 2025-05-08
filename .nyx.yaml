@@ -1,6 +1,5 @@
 preset: 'simple'
 releasePrefix: 'v'
-bump: 'minor'
 
 changelog:
   path: 'CHANGELOG.md'
