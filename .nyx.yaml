@@ -1,5 +1,10 @@
-changelogPath: CHANGELOG.md
-changelogSections:
-  Features: "^feat"
-  Fixes: "^fix"
-  Breaking Changes: "^BREAKING CHANGE"
+preset: 'simple'
+releasePrefix: 'v'
+bump: 'minor'
+
+changelog:
+  path: 'CHANGELOG.md'
+
+commitMessageConventions:
+  enabled:
+    - 'conventionalCommits'
