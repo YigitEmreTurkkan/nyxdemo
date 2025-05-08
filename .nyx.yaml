@@ -7,3 +7,7 @@ changelog:
 commitMessageConventions:
   enabled:
     - 'conventionalCommits'
+
+releaseTypes:
+  mainline:
+    matchBranches: "^(master|main|develop)$" # 'develop' eklendi
