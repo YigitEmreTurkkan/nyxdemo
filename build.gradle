@@ -24,15 +24,18 @@ test {
 nyx {
     preset = 'simple'
     releasePrefix = 'v'
+    
+    // Proje akışına göre minor sürüm artışını varsayılan yapıyoruz
+    // feature branch'leri için minor, hotfix'ler için patch artışı yapılacak
     bump = 'minor'
     
     changelog {
         path = 'CHANGELOG.md'
         sections = [
-            'Added': 'Changes that introduce new features or functionalities',
-            'Changed': 'Changes that modify existing functionalities',
-            'Fixed': 'Changes that fix bugs or issues',
-            'Removed': 'Changes that remove features or functionalities'
+            'Feature': 'Yeni özellikler ve geliştirmeler (feature/ branch\'lerinden)',
+            'Hotfix': 'Hata düzeltmeleri ve kritik yamalar (hotfix/ branch\'lerinden)',
+            'Changed': 'Mevcut özelliklerde yapılan değişiklikler',
+            'Removed': 'Kaldırılan özellikler ve fonksiyonlar'
         ]
         substitutions = [
             'pattern': '(?m)^#\\# \\[?([0-9]+\\.[0-9]+\\.[0-9]+)\\]?.*$',
@@ -42,11 +45,48 @@ nyx {
 
     // Git tag yapılandırması için release types
     releaseTypes {
-        enabled = ["default"]
+        enabled = ["mainline", "release", "hotfix"]
+        
+        mainline {
+            matchBranches = ["main", "production", "master"]
+            publishToRemote = true
+        }
+        
+        release {
+            matchBranches = ["r[0-9]+\\.[0-9]+\\.[0-9]+"]
+            collapseVersions = false
+            publishToRemote = true
+        }
+        
+        hotfix {
+            matchBranches = ["hotfix/.*"]
+            bump = "patch"
+            collapseVersions = false
+            publishToRemote = false
+        }
     }
     
     // Commit mesajlarını tanıma kuralları
     commitMessageConventions {
         enabled = ['conventionalCommits']
+        
+        // Özel commit mesajı kuralı ekliyoruz (JIRA task koduyla)
+        conventionalCommits {
+            expression = '^(feat|fix|docs|style|refactor|test|chore)(\\([\\w\\s-]+\\))?(!)?:\\s([A-Z]+-\\d+)?\\s?(.+)'
+            // Task kodu için grup: $4
+        }
+    }
+    
+    // Git entegrasyonu
+    git {
+        remotes {
+            origin {
+                pushBranches = true
+                pushTags = true
+                user = System.getenv('GIT_USER')
+                password = System.getenv('GIT_PASSWORD')
+                // CI ortamında kullanılmak üzere çevre değişkenlerinden alınır
+            }
+        }
     }
 }
