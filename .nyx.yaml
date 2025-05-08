@@ -1,1 +1,5 @@
 changelogPath: CHANGELOG.md
+changelogSections:
+  Features: "^feat"
+  Fixes: "^fix"
+  Breaking Changes: "^BREAKING CHANGE"
