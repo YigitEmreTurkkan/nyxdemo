@@ -6,6 +6,7 @@ changelog:
   path: "CHANGELOG.md"
   template: null
   append: true
+  includeLatestRelease: true
   sections:
     "Features": "^feat$"
     "Bug Fixes": "^fix$"

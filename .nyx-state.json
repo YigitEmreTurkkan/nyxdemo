@@ -135,23 +135,14 @@
     "infer.input.configured.scheme": "SEMVER",
     "infer.input.configured.version": "null",
     "infer.input.repository.current.branch": "main",
-    "infer.input.repository.last.commit": "5240a4b07c64f69b66de8de7c699b96ba0f31c4c",
+    "infer.input.repository.last.commit": "fb3eecf26d12cc6c3df339a7af35cfa7e8f05fc0",
     "infer.output.state.version": "v0.4.0",
     "make.input.changelog.file": "/project/CHANGELOG.md",
     "make.input.repository.current.branch": "main",
-    "make.input.repository.last.commit": "5240a4b07c64f69b66de8de7c699b96ba0f31c4c",
+    "make.input.repository.last.commit": "fb3eecf26d12cc6c3df339a7af35cfa7e8f05fc0",
     "make.input.state.initialCommit": "a7412eb417fdc48b3bbacb5b310f81169fbc1b41",
     "make.input.state.newVersion": "false",
-    "make.input.version": "v0.4.0",
-    "mark.input.configured.git.commit": "null",
-    "mark.input.configured.git.push": "true",
-    "mark.input.configured.git.tag": "true",
-    "mark.input.repository.current.branch": "main",
-    "mark.input.repository.last.commit": "5240a4b07c64f69b66de8de7c699b96ba0f31c4c",
-    "mark.input.state.initialCommit": "a7412eb417fdc48b3bbacb5b310f81169fbc1b41",
-    "mark.input.state.newVersion": "false",
-    "mark.input.state.version": "v0.4.0",
-    "publish.input.state.version": "v0.4.0"
+    "make.input.version": "v0.4.0"
   },
   "latestVersion": true,
   "newVersion": false,
@@ -159,6 +150,37 @@
   "releaseAssets": [],
   "releaseScope": {
     "commits": [
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746786558000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746786558000,
+            "offset": 0
+          }
+        },
+        "date": 1746786558000,
+        "message": {
+          "fullMessage": "feat: new changes\n",
+          "shortMessage": "feat: new changes"
+        },
+        "parents": [
+          "5240a4b07c64f69b66de8de7c699b96ba0f31c4c"
+        ],
+        "sha": "fb3eecf26d12cc6c3df339a7af35cfa7e8f05fc0"
+      },
       {
         "authorAction": {
           "identity": {
@@ -1221,7 +1243,7 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1746779727000,
+          "timeStamp": 1746786558000,
           "offset": 0
         }
       },
@@ -1231,19 +1253,19 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1746779727000,
+          "timeStamp": 1746786558000,
           "offset": 0
         }
       },
-      "date": 1746779727000,
+      "date": 1746786558000,
       "message": {
-        "fullMessage": "feat: test commit for changelog generation\n",
-        "shortMessage": "feat: test commit for changelog generation"
+        "fullMessage": "feat: new changes\n",
+        "shortMessage": "feat: new changes"
       },
       "parents": [
-        "c0978a61caa024cee6352f90ddd0119f62e5749d"
+        "5240a4b07c64f69b66de8de7c699b96ba0f31c4c"
       ],
-      "sha": "5240a4b07c64f69b66de8de7c699b96ba0f31c4c"
+      "sha": "fb3eecf26d12cc6c3df339a7af35cfa7e8f05fc0"
     },
     "initialCommit": {
       "authorAction": {
@@ -1364,7 +1386,7 @@
     "publish": "true"
   },
   "scheme": "SEMVER",
-  "timestamp": 1746786472895,
+  "timestamp": 1746786740565,
   "version": "v0.4.0",
   "versionMajorNumber": "0",
   "versionMinorNumber": "4",
