@@ -1,8 +1,10 @@
 # Changelog
 
-## v0.5.0-internal.1+timestamp.20250509075015 (2025-05-09)
+## v0.5.0 (2025-05-09)
 
 ### feat
+
+* [cb1c8] feat: Yeni özellikler eklendi (Yigit Emre TURKKAN)
 
 * [e87b1] feat: Yeni özellikler eklendi (Yigit Emre TURKKAN)
 

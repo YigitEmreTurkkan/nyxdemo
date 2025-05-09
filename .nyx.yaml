@@ -3,11 +3,73 @@ releasePrefix: 'v'
 
 changelog:
   path: 'CHANGELOG.md'
+  sections:
+    - type: 'feat'
+      section: 'Features'
+    - type: 'fix'
+      section: 'Bug Fixes'
+    - type: 'docs'
+      section: 'Documentation'
+    - type: 'refactor'
+      section: 'Code Refactoring'
+    - type: 'test'
+      section: 'Tests'
+    - type: 'build'
+      section: 'Build System'
+    - type: 'ci'
+      section: 'Continuous Integration'
 
 commitMessageConventions:
   enabled:
     - 'conventionalCommits'
+  items:
+    conventionalCommits:
+      expression: '^(?<type>build|ci|docs|feat|fix|perf|refactor|test)(?:\((?<scope>[^\)]+)\))?!?:(\ |\ \n)(?<title>.+)$'
+      bumpExpressions:
+        - expression: 'feat\(.*\)!?:'
+          bump: 'minor'
+        - expression: 'fix\(.*\)!?:'
+          bump: 'patch'
+        - expression: '.*!:'
+          bump: 'major'
+
+versioning:
+  enabled: true
+  startingVersion: '0.1.0'
+  mode: 'semver'
+  
+initialVersion: '0.1.0'
 
 releaseTypes:
   mainline:
-    matchBranches: "^(master|main|develop)$" # 'develop' eklendi
+    matchBranches: "^(master|main|develop)$"
+    description: 'Mainline releases for production'
+    collapseVersions: false
+    filterTags: '^v[0-9]+\.[0-9]+\.[0-9]+$'
+    bump:
+      default: 'patch'
+  
+  feature:
+    matchBranches: '^(feature|feat)\/.*$'
+    description: 'Feature branch releases'
+    collapsed: false
+    filterTags: '^v[0-9]+\.[0-9]+\.[0-9]+-(alpha|beta)\.[0-9]+$'
+    prefix: 'alpha'
+    bump:
+      default: 'prerelease'
+      
+  hotfix:
+    matchBranches: '^(hotfix|fix)\/.*$'
+    description: 'Hotfix releases'
+    collapsed: false
+    filterTags: '^v[0-9]+\.[0-9]+\.[0-9]+-(rc)\.[0-9]+$'
+    prefix: 'rc'
+    bump:
+      default: 'prerelease'
+
+services:
+  github:
+    type: 'github'
+    options:
+      repository: 'nyx-demo' # Repo adını projeye göre ayarlayın
+      authentication: 'token' # Token ile kimlik doğrulama yöntemi
