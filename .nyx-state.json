@@ -135,125 +135,30 @@
     "infer.input.configured.scheme": "SEMVER",
     "infer.input.configured.version": "null",
     "infer.input.repository.current.branch": "main",
-    "infer.input.repository.last.commit": "8ace9910234a822ae4f8d45f8901d9660e80fe22",
-    "infer.output.state.version": "v0.6.0",
+    "infer.input.repository.last.commit": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155",
+    "infer.output.state.version": "v1.0.0",
     "make.input.changelog.file": "/project/CHANGELOG.md",
     "make.input.repository.current.branch": "main",
-    "make.input.repository.last.commit": "8ace9910234a822ae4f8d45f8901d9660e80fe22",
-    "make.input.state.initialCommit": "8ace9910234a822ae4f8d45f8901d9660e80fe22",
+    "make.input.repository.last.commit": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155",
+    "make.input.state.initialCommit": "null",
     "make.input.state.newVersion": "false",
-    "make.input.version": "v0.6.0",
+    "make.input.version": "v1.0.0",
     "mark.input.configured.git.commit": "null",
     "mark.input.configured.git.push": "true",
     "mark.input.configured.git.tag": "true",
     "mark.input.repository.current.branch": "main",
-    "mark.input.repository.last.commit": "8ace9910234a822ae4f8d45f8901d9660e80fe22",
-    "mark.input.state.initialCommit": "8ace9910234a822ae4f8d45f8901d9660e80fe22",
+    "mark.input.repository.last.commit": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155",
+    "mark.input.state.initialCommit": "null",
     "mark.input.state.newVersion": "false",
-    "mark.input.state.version": "v0.6.0",
-    "publish.input.state.version": "v0.6.0"
+    "mark.input.state.version": "v1.0.0",
+    "publish.input.state.version": "v1.0.0"
   },
   "latestVersion": true,
   "newVersion": false,
   "newRelease": false,
   "releaseAssets": [],
   "releaseScope": {
-    "commits": [
-      {
-        "authorAction": {
-          "identity": {
-            "email": "yigit.turkkan@eteration.com",
-            "name": "Yigit Emre TURKKAN"
-          },
-          "timeStamp": {
-            "timeStamp": 1746786856000,
-            "offset": 0
-          }
-        },
-        "commitAction": {
-          "identity": {
-            "email": "yigit.turkkan@eteration.com",
-            "name": "Yigit Emre TURKKAN"
-          },
-          "timeStamp": {
-            "timeStamp": 1746786856000,
-            "offset": 0
-          }
-        },
-        "date": 1746786856000,
-        "message": {
-          "fullMessage": "fix: hata düzeltme açıklaması\n",
-          "shortMessage": "fix: hata düzeltme açıklaması"
-        },
-        "parents": [
-          "fb3eecf26d12cc6c3df339a7af35cfa7e8f05fc0"
-        ],
-        "sha": "8ace9910234a822ae4f8d45f8901d9660e80fe22"
-      }
-    ],
-    "finalCommit": {
-      "authorAction": {
-        "identity": {
-          "email": "yigit.turkkan@eteration.com",
-          "name": "Yigit Emre TURKKAN"
-        },
-        "timeStamp": {
-          "timeStamp": 1746786856000,
-          "offset": 0
-        }
-      },
-      "commitAction": {
-        "identity": {
-          "email": "yigit.turkkan@eteration.com",
-          "name": "Yigit Emre TURKKAN"
-        },
-        "timeStamp": {
-          "timeStamp": 1746786856000,
-          "offset": 0
-        }
-      },
-      "date": 1746786856000,
-      "message": {
-        "fullMessage": "fix: hata düzeltme açıklaması\n",
-        "shortMessage": "fix: hata düzeltme açıklaması"
-      },
-      "parents": [
-        "fb3eecf26d12cc6c3df339a7af35cfa7e8f05fc0"
-      ],
-      "sha": "8ace9910234a822ae4f8d45f8901d9660e80fe22"
-    },
-    "initialCommit": {
-      "authorAction": {
-        "identity": {
-          "email": "yigit.turkkan@eteration.com",
-          "name": "Yigit Emre TURKKAN"
-        },
-        "timeStamp": {
-          "timeStamp": 1746786856000,
-          "offset": 0
-        }
-      },
-      "commitAction": {
-        "identity": {
-          "email": "yigit.turkkan@eteration.com",
-          "name": "Yigit Emre TURKKAN"
-        },
-        "timeStamp": {
-          "timeStamp": 1746786856000,
-          "offset": 0
-        }
-      },
-      "date": 1746786856000,
-      "message": {
-        "fullMessage": "fix: hata düzeltme açıklaması\n",
-        "shortMessage": "fix: hata düzeltme açıklaması"
-      },
-      "parents": [
-        "fb3eecf26d12cc6c3df339a7af35cfa7e8f05fc0"
-      ],
-      "sha": "8ace9910234a822ae4f8d45f8901d9660e80fe22"
-    },
-    "previousVersion": "v0.6.0",
+    "previousVersion": "v1.0.0",
     "previousVersionCommit": {
       "authorAction": {
         "identity": {
@@ -261,7 +166,7 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1746786558000,
+          "timeStamp": 1746787229000,
           "offset": 0
         }
       },
@@ -271,28 +176,28 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1746786558000,
+          "timeStamp": 1746787229000,
           "offset": 0
         }
       },
-      "date": 1746786558000,
+      "date": 1746787229000,
       "message": {
-        "fullMessage": "feat: new changes\n",
-        "shortMessage": "feat: new changes"
+        "fullMessage": "feat: changelog yenileme\n",
+        "shortMessage": "feat: changelog yenileme"
       },
       "parents": [
-        "5240a4b07c64f69b66de8de7c699b96ba0f31c4c"
+        "a6f0ca721acf6d6207376449ebff3ec2b4067654"
       ],
       "tags": [
         {
           "annotated": true,
-          "name": "v0.6.0",
-          "target": "fb3eecf26d12cc6c3df339a7af35cfa7e8f05fc0"
+          "name": "v1.0.0",
+          "target": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155"
         }
       ],
-      "sha": "fb3eecf26d12cc6c3df339a7af35cfa7e8f05fc0"
+      "sha": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155"
     },
-    "primeVersion": "v0.6.0",
+    "primeVersion": "v1.0.0",
     "primeVersionCommit": {
       "authorAction": {
         "identity": {
@@ -300,7 +205,7 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1746786558000,
+          "timeStamp": 1746787229000,
           "offset": 0
         }
       },
@@ -310,26 +215,26 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1746786558000,
+          "timeStamp": 1746787229000,
           "offset": 0
         }
       },
-      "date": 1746786558000,
+      "date": 1746787229000,
       "message": {
-        "fullMessage": "feat: new changes\n",
-        "shortMessage": "feat: new changes"
+        "fullMessage": "feat: changelog yenileme\n",
+        "shortMessage": "feat: changelog yenileme"
       },
       "parents": [
-        "5240a4b07c64f69b66de8de7c699b96ba0f31c4c"
+        "a6f0ca721acf6d6207376449ebff3ec2b4067654"
       ],
       "tags": [
         {
           "annotated": true,
-          "name": "v0.6.0",
-          "target": "fb3eecf26d12cc6c3df339a7af35cfa7e8f05fc0"
+          "name": "v1.0.0",
+          "target": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155"
         }
       ],
-      "sha": "fb3eecf26d12cc6c3df339a7af35cfa7e8f05fc0"
+      "sha": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155"
     }
   },
   "releaseType": {
@@ -341,9 +246,9 @@
     "publish": "true"
   },
   "scheme": "SEMVER",
-  "timestamp": 1746786874176,
-  "version": "v0.6.0",
-  "versionMajorNumber": "0",
-  "versionMinorNumber": "6",
+  "timestamp": 1746787429321,
+  "version": "v1.0.0",
+  "versionMajorNumber": "1",
+  "versionMinorNumber": "0",
   "versionPatchNumber": "0"
 }
