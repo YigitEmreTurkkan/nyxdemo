@@ -1,14 +1,10 @@
 # Changelog
 
-## v0.5.0-internal.1+timestamp.20250508130155 (2025-05-08)
-
-### fix
-
-* [3a7ae] fix: nyx yapılandırması. (Yigit Emre TURKKAN)
-
-* [e2eff] fix: Nyx yapılandırması basitleştirildi (Yigit Emre TURKKAN)
+## v0.5.0-internal.1+timestamp.20250509074246 (2025-05-09)
 
 ### feat
+
+* [6e871] feat: changelog güncellemesi (Yigit Emre TURKKAN)
 
 * [ae470] feat: Yeni kullanıcı kayıt özelliği eklendi... (Yigit Emre TURKKAN)
 
@@ -45,6 +41,12 @@
 * [41905] feat: yeni değişiklikler. (Yigit Emre Turkkan)
 
 * [a7412] feat: yenilikler yapıldı (Yigit Emre TURKKAN)
+
+### fix
+
+* [3a7ae] fix: nyx yapılandırması. (Yigit Emre TURKKAN)
+
+* [e2eff] fix: Nyx yapılandırması basitleştirildi (Yigit Emre TURKKAN)
 
 ### Fixed
 
