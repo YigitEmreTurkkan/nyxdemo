@@ -3,8 +3,10 @@ releasePrefix: 'v'
 
 changelog:
   path: 'CHANGELOG.md'
-  templates: {}  # Boş map olarak tanımla
-  sections:      # Sections bir array olmalı
+  templates:
+    default:
+      content: '{{#releases}}# {{name}}{{#sections}}\n\n## {{name}}\n\n{{#commits}}* {{#hash}}[{{.}}] {{/hash}}{{message}}{{#author}} ({{.}}){{/author}}\n{{/commits}}{{/sections}}{{/releases}}'
+  sections:
     - type: 'feat'
       section: 'Features'
     - type: 'fix'
