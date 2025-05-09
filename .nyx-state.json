@@ -135,20 +135,20 @@
     "infer.input.configured.scheme": "SEMVER",
     "infer.input.configured.version": "null",
     "infer.input.repository.current.branch": "main",
-    "infer.input.repository.last.commit": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155",
+    "infer.input.repository.last.commit": "ad61596e7ec9e7a4b9a118af55e757fdefe1d74e",
     "infer.output.state.version": "v1.0.0",
     "make.input.changelog.file": "/project/CHANGELOG.md",
     "make.input.repository.current.branch": "main",
-    "make.input.repository.last.commit": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155",
-    "make.input.state.initialCommit": "null",
+    "make.input.repository.last.commit": "ad61596e7ec9e7a4b9a118af55e757fdefe1d74e",
+    "make.input.state.initialCommit": "76aa68496a389b766bb5382aa049c63008ef3dc5",
     "make.input.state.newVersion": "false",
     "make.input.version": "v1.0.0",
     "mark.input.configured.git.commit": "null",
     "mark.input.configured.git.push": "true",
     "mark.input.configured.git.tag": "true",
     "mark.input.repository.current.branch": "main",
-    "mark.input.repository.last.commit": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155",
-    "mark.input.state.initialCommit": "null",
+    "mark.input.repository.last.commit": "ad61596e7ec9e7a4b9a118af55e757fdefe1d74e",
+    "mark.input.state.initialCommit": "76aa68496a389b766bb5382aa049c63008ef3dc5",
     "mark.input.state.newVersion": "false",
     "mark.input.state.version": "v1.0.0",
     "publish.input.state.version": "v1.0.0"
@@ -158,6 +158,132 @@
   "newRelease": false,
   "releaseAssets": [],
   "releaseScope": {
+    "commits": [
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787518000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787518000,
+            "offset": 0
+          }
+        },
+        "date": 1746787518000,
+        "message": {
+          "fullMessage": "feat: changelog yenileme için commit\n",
+          "shortMessage": "feat: changelog yenileme için commit"
+        },
+        "parents": [
+          "76aa68496a389b766bb5382aa049c63008ef3dc5"
+        ],
+        "sha": "ad61596e7ec9e7a4b9a118af55e757fdefe1d74e"
+      },
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787466000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787466000,
+            "offset": 0
+          }
+        },
+        "date": 1746787466000,
+        "message": {
+          "fullMessage": "feat: yeni özellik eklendi\n",
+          "shortMessage": "feat: yeni özellik eklendi"
+        },
+        "parents": [
+          "e6e5ffbf976a5b1ff4101448f123e9a3a1198155"
+        ],
+        "sha": "76aa68496a389b766bb5382aa049c63008ef3dc5"
+      }
+    ],
+    "finalCommit": {
+      "authorAction": {
+        "identity": {
+          "email": "yigit.turkkan@eteration.com",
+          "name": "Yigit Emre TURKKAN"
+        },
+        "timeStamp": {
+          "timeStamp": 1746787518000,
+          "offset": 0
+        }
+      },
+      "commitAction": {
+        "identity": {
+          "email": "yigit.turkkan@eteration.com",
+          "name": "Yigit Emre TURKKAN"
+        },
+        "timeStamp": {
+          "timeStamp": 1746787518000,
+          "offset": 0
+        }
+      },
+      "date": 1746787518000,
+      "message": {
+        "fullMessage": "feat: changelog yenileme için commit\n",
+        "shortMessage": "feat: changelog yenileme için commit"
+      },
+      "parents": [
+        "76aa68496a389b766bb5382aa049c63008ef3dc5"
+      ],
+      "sha": "ad61596e7ec9e7a4b9a118af55e757fdefe1d74e"
+    },
+    "initialCommit": {
+      "authorAction": {
+        "identity": {
+          "email": "yigit.turkkan@eteration.com",
+          "name": "Yigit Emre TURKKAN"
+        },
+        "timeStamp": {
+          "timeStamp": 1746787466000,
+          "offset": 0
+        }
+      },
+      "commitAction": {
+        "identity": {
+          "email": "yigit.turkkan@eteration.com",
+          "name": "Yigit Emre TURKKAN"
+        },
+        "timeStamp": {
+          "timeStamp": 1746787466000,
+          "offset": 0
+        }
+      },
+      "date": 1746787466000,
+      "message": {
+        "fullMessage": "feat: yeni özellik eklendi\n",
+        "shortMessage": "feat: yeni özellik eklendi"
+      },
+      "parents": [
+        "e6e5ffbf976a5b1ff4101448f123e9a3a1198155"
+      ],
+      "sha": "76aa68496a389b766bb5382aa049c63008ef3dc5"
+    },
     "previousVersion": "v1.0.0",
     "previousVersionCommit": {
       "authorAction": {
