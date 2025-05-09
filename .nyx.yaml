@@ -1,78 +1,73 @@
-preset: 'simple'
-releasePrefix: 'v'
+preset: simple
+releasePrefix: v
 
+# Changelog yapılandırması
 changelog:
-  path: 'CHANGELOG.md'
+  path: CHANGELOG.md
   templates:
     default:
-      content: '{{#releases}}# {{name}}{{#sections}}\n\n## {{name}}\n\n{{#commits}}* {{#hash}}[{{.}}] {{/hash}}{{message}}{{#author}} ({{.}}){{/author}}\n{{/commits}}{{/sections}}{{/releases}}'
+      content: "{{#releases}}# {{name}}{{#sections}}\n\n## {{name}}\n\n{{#commits}}* {{#hash}}[{{.}}] {{/hash}}{{message}}{{#author}} ({{.}}){{/author}}\n{{/commits}}{{/sections}}{{/releases}}"
   sections:
-    - type: 'feat'
-      section: 'Features'
-    - type: 'fix'
-      section: 'Bug Fixes'
-    - type: 'docs'
-      section: 'Documentation'
-    - type: 'refactor'
-      section: 'Code Refactoring'
-    - type: 'test'
-      section: 'Tests'
-    - type: 'build'
-      section: 'Build System'
-    - type: 'ci'
-      section: 'Continuous Integration'
+    feat: "Features" 
+    fix: "Bug Fixes"
+    docs: "Documentation"
+    refactor: "Code Refactoring"
+    test: "Tests"
+    build: "Build System"
+    ci: "Continuous Integration"
 
+# Commit mesaj yapılandırması
 commitMessageConventions:
   enabled:
-    - 'conventionalCommits'
+    - conventionalCommits
   items:
     conventionalCommits:
-      expression: '^(?<type>build|ci|docs|feat|fix|perf|refactor|test)(?:\((?<scope>[^\)]+)\))?!?:(\ |\ \n)(?<title>.+)$'
+      expression: "^(?<type>build|ci|docs|feat|fix|perf|refactor|test)(?:\\((?<scope>[^\\)]+)\\))?!?:(\\s|\\s\\n)(?<title>.+)$"
       bumpExpressions:
-        - expression: 'feat\(.*\)!?:'
-          bump: 'minor'
-        - expression: 'fix\(.*\)!?:'
-          bump: 'patch'
-        - expression: '.*!:'
-          bump: 'major'
+        feat: "minor"
+        fix: "patch"
+        breaking: "major"
 
+# Versiyon yapılandırması
 versioning:
   enabled: true
-  startingVersion: '0.1.0'
-  mode: 'semver'
-  
-initialVersion: '0.1.0'
+  startingVersion: 0.1.0
+  mode: semver
 
+initialVersion: 0.1.0
+
+# Sürüm türleri
 releaseTypes:
   mainline:
     matchBranches: "^(master|main|develop)$"
-    description: 'Mainline releases for production'
+    description: "Mainline releases for production"
     collapseVersions: false
-    filterTags: '^v[0-9]+\.[0-9]+\.[0-9]+$'
+    filterTags: "^v[0-9]+\\.[0-9]+\\.[0-9]+$"
     bump:
-      default: 'patch'
+      default: patch
   
   feature:
-    matchBranches: '^(feature|feat)\/.*$'
-    description: 'Feature branch releases'
+    matchBranches: "^(feature|feat)\\/.*$"
+    description: "Feature branch releases"
     collapsed: false
-    filterTags: '^v[0-9]+\.[0-9]+\.[0-9]+-(alpha|beta)\.[0-9]+$'
-    prefix: 'alpha'
+    filterTags: "^v[0-9]+\\.[0-9]+\\.[0-9]+-(alpha|beta)\\.[0-9]+$"
+    prefix: alpha
     bump:
-      default: 'prerelease'
+      default: prerelease
       
   hotfix:
-    matchBranches: '^(hotfix|fix)\/.*$'
-    description: 'Hotfix releases'
+    matchBranches: "^(hotfix|fix)\\/.*$"
+    description: "Hotfix releases"
     collapsed: false
-    filterTags: '^v[0-9]+\.[0-9]+\.[0-9]+-(rc)\.[0-9]+$'
-    prefix: 'rc'
+    filterTags: "^v[0-9]+\\.[0-9]+\\.[0-9]+-(rc)\\.[0-9]+$"
+    prefix: rc
     bump:
-      default: 'prerelease'
+      default: prerelease
 
+# Servis yapılandırması
 services:
   github:
-    type: 'github'
+    type: github
     options:
-      repository: 'nyx-demo'
-      authentication: 'token'
+      repository: nyx-demo
+      authentication: token
