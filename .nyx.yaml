@@ -1,10 +1,9 @@
 preset: "simple"
 releasePrefix: "v"
 
-# Changelog yapılandırması - Sadece son commit'leri gösterecek şekilde
+# Changelog yapılandırması - Tamamen yeniden yapılandırıldı
 changelog:
   path: "CHANGELOG.md"
-  template: null
   append: true
   includeLatestRelease: true
   sections:
@@ -12,8 +11,22 @@ changelog:
     "Bug Fixes": "^fix$"
     "Performance Improvements": "^perf$"
     "Documentation": "^docs$"
+  templates:
+    default:
+      content: |
+        # Changelog
+        {{#releases}}
+        ## {{name}}{{#if date}} ({{date}}){{/if}}
+        {{#sections}}
+        ### {{name}}
+        {{#commits}}
+        * {{#if hash}}[{{hash}}] {{/if}}{{message}}{{#if author}} ({{author}}){{/if}}
+        {{/commits}}
+        {{/sections}}
+        {{/releases}}
   substitutions:
     "(?m)\\[([a-z0-9]+)\\](?s)": "[[%s](https://github.com/yourusername/nyx-demo/commit/%s)]"
+
 
 # Commit mesaj yapılandırması
 commitMessageConventions:
