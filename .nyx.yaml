@@ -3,7 +3,8 @@ releasePrefix: 'v'
 
 changelog:
   path: 'CHANGELOG.md'
-  sections:
+  templates: {}  # Boş map olarak tanımla
+  sections:      # Sections bir array olmalı
     - type: 'feat'
       section: 'Features'
     - type: 'fix'
@@ -71,5 +72,5 @@ services:
   github:
     type: 'github'
     options:
-      repository: 'nyx-demo' # Repo adını projeye göre ayarlayın
-      authentication: 'token' # Token ile kimlik doğrulama yöntemi
+      repository: 'nyx-demo'
+      authentication: 'token'
