@@ -1,6 +1,12 @@
 # Changelog
 
-## v0.5.0-internal.1+timestamp.20250508125603 (2025-05-08)
+## v0.5.0-internal.1+timestamp.20250508130155 (2025-05-08)
+
+### fix
+
+* [3a7ae] fix: nyx yapılandırması. (Yigit Emre TURKKAN)
+
+* [e2eff] fix: Nyx yapılandırması basitleştirildi (Yigit Emre TURKKAN)
 
 ### feat
 
@@ -45,10 +51,6 @@
 * [a2dbd] Fixed: Düzenlemeler (Yigit Emre TURKKAN)
 
 * [00a40] Fixed: Düzenleme (Yigit Emre TURKKAN)
-
-### fix
-
-* [e2eff] fix: Nyx yapılandırması basitleştirildi (Yigit Emre TURKKAN)
 
 ### chore
 
