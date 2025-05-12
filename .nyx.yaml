@@ -3,7 +3,6 @@ releasePrefix: v
 
 changelog:
   path: CHANGELOG.md
-  append: "true"
   includeLatestRelease: true
   sections:
     features: "🚀 Features"

@@ -1,6 +1,23 @@
-# Nyx Demo Project
+# NYX Demo Projesi
 
-A simple demonstration project using Nyx for version management.
+Bu proje, Nyx aracının özelliklerini gösteren basit bir demo projesidir.
+
+## Özellikler
+
+- Semantic versiyonlama
+- Otomatik sürüm belirleme
+- Changelog oluşturma
+- GitHub/GitLab entegrasyonu
+
+## Kullanım
+
+Docker ile kullanım:
+
+```bash
+./docker-nyx.sh infer   # Sürümü belirle
+./docker-nyx.sh make    # Changelog oluştur
+./docker-nyx.sh mark    # Etiketleme ve diğer işlemler
+```
 
 ## Setup
 
@@ -155,24 +172,6 @@ nyx {
 
 # Gradle wrapper'ı güncelle (opsiyonel)
 ./gradlew wrapper --gradle-version=7.6
-```
-
-## Kullanım
-
-Nyx'i Gradle ile çalıştırmak için: .fd
-
-```bash
-# Mevcut durum ve versiyon bilgisini görmek için
-./gradlew nyxInfer
-
-# Yeni bir sürüm etiketi oluşturmak için
-./gradlew nyxMark
-
-# Release işlemini gerçekleştirmek için
-./gradlew nyxPublish
-
-# Temizlik işlemleri için
-./gradlew nyxClean
 ```
 
 ## Konfigürasyon
