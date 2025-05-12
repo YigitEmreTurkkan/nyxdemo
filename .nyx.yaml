@@ -6,12 +6,9 @@ changelog:
   append: true
   includeLatestRelease: true
   sections:
-    - id: features
-      title: "🚀 Features"
-    - id: fixes
-      title: "🐛 Bug Fixes"
-    - id: chores
-      title: "🔧 Maintenance"
+    features: "🚀 Features"
+    fixes: "🐛 Bug Fixes"
+    chores: "🔧 Maintenance"
   templates:
     default:
       content: |

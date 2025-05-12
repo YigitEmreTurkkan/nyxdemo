@@ -5,7 +5,11 @@
     "changelog": {
       "append": "true",
       "path": "CHANGELOG.md",
-      "sections": {},
+      "sections": {
+        "chores": "🔧 Maintenance",
+        "features": "🚀 Features",
+        "fixes": "🐛 Bug Fixes"
+      },
       "substitutions": {}
     },
     "commitMessageConventions": {
@@ -14,11 +18,11 @@
       ],
       "items": {
         "conventionalCommits": {
-          "expression": "(?m)^(?\u003ctype\u003e[a-zA-Z0-9_]+)(\\((?\u003cscope\u003e[a-zA-Z0-9 \\-_]+)\\))?(!)?:( (?\u003ctitle\u003e.+))$(?s).*",
+          "expression": "^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\\([a-z0-9 ,-]+\\))?!?: (.+)$",
           "bumpExpressions": {
-            "major": "(?s)(?m)^[a-zA-Z0-9_]+(\\([a-zA-Z0-9 \\-_]+\\))?(!: .*|.*^(BREAKING( |-)CHANGE: )).*",
-            "minor": "(?s)(?m)^feat(!{0})(\\([a-zA-Z0-9 \\-_]+\\))?: (?!.*^(BREAKING( |-)CHANGE: )).*",
-            "patch": "(?s)(?m)^fix(!{0})(\\([a-zA-Z0-9 \\-_]+\\))?: (?!.*^(BREAKING( |-)CHANGE: )).*"
+            "major": "^(feat|fix|refactor|perf)(\\([a-z0-9 ,-]+\\))?!:",
+            "minor": "^feat(\\([a-z0-9 ,-]+\\))?:",
+            "patch": "^(fix|perf)(\\([a-z0-9 ,-]+\\))?:"
           }
         }
       }
@@ -70,7 +74,7 @@
     "infer.input.configured.scheme": "SEMVER",
     "infer.input.configured.version": "null",
     "infer.input.repository.current.branch": "main",
-    "infer.input.repository.last.commit": "ab24910ffad2518a6582549bde7e2e226a5fe405",
+    "infer.input.repository.last.commit": "18f7b4585827254a41f9547017b3c3194ead7682",
     "infer.output.state.version": "v1.1.0"
   },
   "latestVersion": true,
@@ -79,6 +83,37 @@
   "releaseAssets": [],
   "releaseScope": {
     "commits": [
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747048899000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747048899000,
+            "offset": 0
+          }
+        },
+        "date": 1747048899000,
+        "message": {
+          "fullMessage": "feat: dene\n",
+          "shortMessage": "feat: dene"
+        },
+        "parents": [
+          "ab24910ffad2518a6582549bde7e2e226a5fe405"
+        ],
+        "sha": "18f7b4585827254a41f9547017b3c3194ead7682"
+      },
       {
         "authorAction": {
           "identity": {
@@ -366,7 +401,7 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1747033533000,
+          "timeStamp": 1747048899000,
           "offset": 0
         }
       },
@@ -376,19 +411,19 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1747033533000,
+          "timeStamp": 1747048899000,
           "offset": 0
         }
       },
-      "date": 1747033533000,
+      "date": 1747048899000,
       "message": {
-        "fullMessage": "feat\n",
-        "shortMessage": "feat"
+        "fullMessage": "feat: dene\n",
+        "shortMessage": "feat: dene"
       },
       "parents": [
-        "7bd277dca0146d440fe2c11f5a7cb41b420380b6"
+        "ab24910ffad2518a6582549bde7e2e226a5fe405"
       ],
-      "sha": "ab24910ffad2518a6582549bde7e2e226a5fe405"
+      "sha": "18f7b4585827254a41f9547017b3c3194ead7682"
     },
     "initialCommit": {
       "authorAction": {
@@ -500,6 +535,37 @@
       "sha": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155"
     },
     "significantCommits": [
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747048899000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747048899000,
+            "offset": 0
+          }
+        },
+        "date": 1747048899000,
+        "message": {
+          "fullMessage": "feat: dene\n",
+          "shortMessage": "feat: dene"
+        },
+        "parents": [
+          "ab24910ffad2518a6582549bde7e2e226a5fe405"
+        ],
+        "sha": "18f7b4585827254a41f9547017b3c3194ead7682"
+      },
       {
         "authorAction": {
           "identity": {
