@@ -74,7 +74,7 @@
     "infer.input.configured.scheme": "SEMVER",
     "infer.input.configured.version": "null",
     "infer.input.repository.current.branch": "main",
-    "infer.input.repository.last.commit": "18f7b4585827254a41f9547017b3c3194ead7682",
+    "infer.input.repository.last.commit": "052ae114b49200882d8facb081855b0fca0c4e06",
     "infer.output.state.version": "v1.1.0"
   },
   "latestVersion": true,
@@ -83,6 +83,37 @@
   "releaseAssets": [],
   "releaseScope": {
     "commits": [
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747049013000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747049013000,
+            "offset": 0
+          }
+        },
+        "date": 1747049013000,
+        "message": {
+          "fullMessage": "features: yenilikler\n",
+          "shortMessage": "features: yenilikler"
+        },
+        "parents": [
+          "18f7b4585827254a41f9547017b3c3194ead7682"
+        ],
+        "sha": "052ae114b49200882d8facb081855b0fca0c4e06"
+      },
       {
         "authorAction": {
           "identity": {
@@ -401,7 +432,7 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1747048899000,
+          "timeStamp": 1747049013000,
           "offset": 0
         }
       },
@@ -411,19 +442,19 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1747048899000,
+          "timeStamp": 1747049013000,
           "offset": 0
         }
       },
-      "date": 1747048899000,
+      "date": 1747049013000,
       "message": {
-        "fullMessage": "feat: dene\n",
-        "shortMessage": "feat: dene"
+        "fullMessage": "features: yenilikler\n",
+        "shortMessage": "features: yenilikler"
       },
       "parents": [
-        "ab24910ffad2518a6582549bde7e2e226a5fe405"
+        "18f7b4585827254a41f9547017b3c3194ead7682"
       ],
-      "sha": "18f7b4585827254a41f9547017b3c3194ead7682"
+      "sha": "052ae114b49200882d8facb081855b0fca0c4e06"
     },
     "initialCommit": {
       "authorAction": {
