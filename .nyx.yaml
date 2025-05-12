@@ -50,6 +50,7 @@ releaseTypes:
   items:
     mainline:
       description: Mainline releases
+      gitCommit: true
       gitPush: true
       gitTag: true
       matchBranches: ^(master|main)$
