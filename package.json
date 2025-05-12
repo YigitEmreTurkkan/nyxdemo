@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "nyx"
+    "release": "nyx",
+    "version:info": "nyx info",
+    "version:infer": "nyx infer-version",
+    "version:plan": "nyx plan",
+    "version:publish": "nyx publish"
   },
   "author": "",
   "license": "MIT"

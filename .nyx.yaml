@@ -1,41 +1,63 @@
-preset: "simple"
-releasePrefix: "v"
+preset: simple
+releasePrefix: v
 
-# Changelog yapılandırması
 changelog:
-  path: "CHANGELOG.md"
+  path: CHANGELOG.md
   append: true
   includeLatestRelease: true
+  sections:
+    - id: features
+      title: "🚀 Features"
+    - id: fixes
+      title: "🐛 Bug Fixes"
+    - id: chores
+      title: "🔧 Maintenance"
   templates:
     default:
       content: |
         # Changelog
         {{#releases}}
         ## {{name}}{{#if date}} ({{date}}){{/if}}
+        {{#each sections}}
+        ### {{title}}
         {{#changes}}
         * {{message}}
         {{/changes}}
+        {{/each}}
         {{/releases}}
 
-# Versiyonlama ayarları
 versioning:
-  mode: "semver"
-  initialVersion: "0.1.0"
+  mode: semver
+  initialVersion: 0.1.0
   enabled: true
 
-# Sürüm türleri ve yapılandırma
+commitMessageConventions:
+  enabled:
+    - conventionalCommits
+  items:
+    conventionalCommits:
+      expression: "^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\\([a-z0-9 ,-]+\\))?!?: (.+)$"
+      bumpExpressions:
+        major: "^(feat|fix|refactor|perf)(\\([a-z0-9 ,-]+\\))?!:"
+        minor: "^feat(\\([a-z0-9 ,-]+\\))?:"
+        patch: "^(fix|perf)(\\([a-z0-9 ,-]+\\))?:"
+      serviceMapping:
+        features: "^feat.*$"
+        fixes: "^fix.*$"
+        chores: "^(chore|refactor|docs|style|test|build|ci|perf|revert).*$"
+
 releaseTypes:
   enabled:
     - mainline
   items:
     mainline:
-      description: "Mainline releases"
+      description: Mainline releases
       gitPush: true
       gitTag: true
-      matchBranches: "^(master|main)$"
+      matchBranches: ^(master|main)$
       publish: true
       bump:
-        default: "patch"
+        default: patch
 
 resume: true
-stateFile: ".nyx-state.json"
+stateFile: .nyx-state.json
