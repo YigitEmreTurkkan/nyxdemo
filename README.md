@@ -8,6 +8,8 @@ Bu proje, Nyx aracının özelliklerini gösteren basit bir demo projesidir.
 - Otomatik sürüm belirleme
 - Changelog oluşturma
 - GitHub/GitLab entegrasyonu
+- Docker entegrasyonu
+- Otomatik sürüm notları
 
 ## Kullanım
 
@@ -18,6 +20,13 @@ Docker ile kullanım:
 ./docker-nyx.sh make    # Changelog oluştur
 ./docker-nyx.sh mark    # Etiketleme ve diğer işlemler
 ```
+
+## Nyx Komutları
+
+- `infer`: Git commit geçmişini analiz ederek bir sonraki sürümü belirler
+- `make`: Changelog dosyasını oluşturur
+- `mark`: Git tag'leri oluşturur
+- `publish`: Sürümü GitHub/GitLab gibi servislere yayınlar
 
 ## Setup
 

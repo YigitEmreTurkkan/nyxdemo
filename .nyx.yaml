@@ -45,6 +45,8 @@ commitMessageConventions:
 releaseTypes:
   enabled:
     - mainline
+  publicationServices:
+    - github
   items:
     mainline:
       description: Mainline releases
@@ -54,6 +56,14 @@ releaseTypes:
       publish: true
       bump:
         default: patch
+
+services:
+  github:
+    type: GITHUB
+    options:
+      AUTHENTICATION_TOKEN: "{{#environmentVariable}}GITHUB_TOKEN{{/environmentVariable}}"
+      REPOSITORY_OWNER: "YigitEmreTurkkan"
+      REPOSITORY_NAME: "nyxdemo"
 
 resume: true
 stateFile: .nyx-state.json
