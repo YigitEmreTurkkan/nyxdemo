@@ -1,18 +1,12 @@
 {
   "branch": "main",
+  "bump": "minor",
   "configuration": {
     "changelog": {
       "append": "true",
       "path": "CHANGELOG.md",
-      "sections": {
-        "Bug Fixes": "^fix$",
-        "Documentation": "^docs$",
-        "Features": "^feat$",
-        "Performance Improvements": "^perf$"
-      },
-      "substitutions": {
-        "(?m)\\[([a-z0-9]+)\\](?s)": "[[%s](https://github.com/yourusername/nyx-demo/commit/%s)]"
-      }
+      "sections": {},
+      "substitutions": {}
     },
     "commitMessageConventions": {
       "enabled": [
@@ -20,11 +14,11 @@
       ],
       "items": {
         "conventionalCommits": {
-          "expression": "^(?\u003ctype\u003ebuild|ci|docs|feat|fix|perf|refactor|test)(?:\\((?\u003cscope\u003e[^\\)]+)\\))?!?:(\\s|\\s\\n)(?\u003ctitle\u003e.+)$",
+          "expression": "(?m)^(?\u003ctype\u003e[a-zA-Z0-9_]+)(\\((?\u003cscope\u003e[a-zA-Z0-9 \\-_]+)\\))?(!)?:( (?\u003ctitle\u003e.+))$(?s).*",
           "bumpExpressions": {
-            "breaking": "major",
-            "feat": "minor",
-            "fix": "patch"
+            "major": "(?s)(?m)^[a-zA-Z0-9_]+(\\([a-zA-Z0-9 \\-_]+\\))?(!: .*|.*^(BREAKING( |-)CHANGE: )).*",
+            "minor": "(?s)(?m)^feat(!{0})(\\([a-zA-Z0-9 \\-_]+\\))?: (?!.*^(BREAKING( |-)CHANGE: )).*",
+            "patch": "(?s)(?m)^fix(!{0})(\\([a-zA-Z0-9 \\-_]+\\))?: (?!.*^(BREAKING( |-)CHANGE: )).*"
           }
         }
       }
@@ -41,64 +35,13 @@
     "releasePrefix": "v",
     "releaseTypes": {
       "enabled": [
-        "mainline",
-        "feature",
-        "hotfix",
-        "internal"
+        "mainline"
       ],
-      "publicationServices": [
-        "github"
-      ],
+      "publicationServices": [],
       "remoteRepositories": [],
       "items": {
-        "feature": {
-          "collapseVersions": true,
-          "collapsedVersionQualifier": "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}",
-          "description": "Feature branch releases",
-          "filterTags": "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(feat|feature)(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$",
-          "gitPush": "true",
-          "gitTag": "true",
-          "matchBranches": "^(feat|feature)((-|\\/)[0-9a-zA-Z-_]+)?$",
-          "publish": "false",
-          "publishPreRelease": "false"
-        },
-        "hotfix": {
-          "collapseVersions": true,
-          "collapsedVersionQualifier": "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}",
-          "description": "Hotfix releases",
-          "filterTags": "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-hotfix(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$",
-          "gitPush": "true",
-          "gitTag": "true",
-          "matchBranches": "^hotfix((-|\\/)[0-9a-zA-Z-_]+)?$",
-          "publish": "false",
-          "publishPreRelease": "false"
-        },
-        "internal": {
-          "collapseVersions": true,
-          "collapsedVersionQualifier": "internal",
-          "description": "Internal builds",
-          "gitPush": "false",
-          "gitTag": "true",
-          "identifiers": [
-            {
-              "qualifier": "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}",
-              "position": "BUILD"
-            },
-            {
-              "qualifier": "{{#short5}}{{releaseScope.finalCommit}}{{/short5}}",
-              "position": "BUILD"
-            },
-            {
-              "qualifier": "timestamp.{{#timestampYYYYMMDDHHMMSS}}{{timestamp}}{{/timestampYYYYMMDDHHMMSS}}",
-              "position": "BUILD"
-            }
-          ],
-          "publish": "false",
-          "publishPreRelease": "false"
-        },
         "mainline": {
           "description": "Mainline releases",
-          "filterTags": "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$",
           "gitPush": "true",
           "gitTag": "true",
           "matchBranches": "^(master|main)$",
@@ -108,15 +51,7 @@
     },
     "resume": true,
     "scheme": "SEMVER",
-    "services": {
-      "github": {
-        "options": {
-          "authentication": "token",
-          "repository": "nyx-demo"
-        },
-        "type": "github"
-      }
-    },
+    "services": {},
     "stateFile": ".nyx-state.json",
     "substitutions": {
       "enabled": [],
@@ -135,30 +70,46 @@
     "infer.input.configured.scheme": "SEMVER",
     "infer.input.configured.version": "null",
     "infer.input.repository.current.branch": "main",
-    "infer.input.repository.last.commit": "cd677a26a6593fdcb8ab65e39ead24c03e09bdc3",
-    "infer.output.state.version": "v1.0.0",
-    "make.input.changelog.file": "/project/CHANGELOG.md",
-    "make.input.repository.current.branch": "main",
-    "make.input.repository.last.commit": "cd677a26a6593fdcb8ab65e39ead24c03e09bdc3",
-    "make.input.state.initialCommit": "76aa68496a389b766bb5382aa049c63008ef3dc5",
-    "make.input.state.newVersion": "false",
-    "make.input.version": "v1.0.0",
-    "mark.input.configured.git.commit": "null",
-    "mark.input.configured.git.push": "true",
-    "mark.input.configured.git.tag": "true",
-    "mark.input.repository.current.branch": "main",
-    "mark.input.repository.last.commit": "cd677a26a6593fdcb8ab65e39ead24c03e09bdc3",
-    "mark.input.state.initialCommit": "76aa68496a389b766bb5382aa049c63008ef3dc5",
-    "mark.input.state.newVersion": "false",
-    "mark.input.state.version": "v1.0.0",
-    "publish.input.state.version": "v1.0.0"
+    "infer.input.repository.last.commit": "594630862e0c1d101b26aa9d2e4029953b4751f6",
+    "infer.output.state.version": "v1.1.0"
   },
   "latestVersion": true,
-  "newVersion": false,
-  "newRelease": false,
+  "newVersion": true,
+  "newRelease": true,
   "releaseAssets": [],
   "releaseScope": {
     "commits": [
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747030612000,
+            "offset": 180
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747030612000,
+            "offset": 180
+          }
+        },
+        "date": 1747030612000,
+        "message": {
+          "fullMessage": "feat: yenilikler\n",
+          "shortMessage": "feat: yenilikler"
+        },
+        "parents": [
+          "cd677a26a6593fdcb8ab65e39ead24c03e09bdc3"
+        ],
+        "sha": "594630862e0c1d101b26aa9d2e4029953b4751f6"
+      },
       {
         "authorAction": {
           "identity": {
@@ -291,8 +242,8 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1746787743000,
-          "offset": 0
+          "timeStamp": 1747030612000,
+          "offset": 180
         }
       },
       "commitAction": {
@@ -301,19 +252,19 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1746787743000,
-          "offset": 0
+          "timeStamp": 1747030612000,
+          "offset": 180
         }
       },
-      "date": 1746787743000,
+      "date": 1747030612000,
       "message": {
-        "fullMessage": "feat: changelog yenileme için commit\n",
-        "shortMessage": "feat: changelog yenileme için commit"
+        "fullMessage": "feat: yenilikler\n",
+        "shortMessage": "feat: yenilikler"
       },
       "parents": [
-        "600494786156d882b4cc0686168e390747c6bf51"
+        "cd677a26a6593fdcb8ab65e39ead24c03e09bdc3"
       ],
-      "sha": "cd677a26a6593fdcb8ab65e39ead24c03e09bdc3"
+      "sha": "594630862e0c1d101b26aa9d2e4029953b4751f6"
     },
     "initialCommit": {
       "authorAction": {
@@ -423,20 +374,176 @@
         }
       ],
       "sha": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155"
-    }
+    },
+    "significantCommits": [
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747030612000,
+            "offset": 180
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747030612000,
+            "offset": 180
+          }
+        },
+        "date": 1747030612000,
+        "message": {
+          "fullMessage": "feat: yenilikler\n",
+          "shortMessage": "feat: yenilikler"
+        },
+        "parents": [
+          "cd677a26a6593fdcb8ab65e39ead24c03e09bdc3"
+        ],
+        "sha": "594630862e0c1d101b26aa9d2e4029953b4751f6"
+      },
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787743000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787743000,
+            "offset": 0
+          }
+        },
+        "date": 1746787743000,
+        "message": {
+          "fullMessage": "feat: changelog yenileme için commit\n",
+          "shortMessage": "feat: changelog yenileme için commit"
+        },
+        "parents": [
+          "600494786156d882b4cc0686168e390747c6bf51"
+        ],
+        "sha": "cd677a26a6593fdcb8ab65e39ead24c03e09bdc3"
+      },
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787573000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787573000,
+            "offset": 0
+          }
+        },
+        "date": 1746787573000,
+        "message": {
+          "fullMessage": "feat: yeni özellikler\n",
+          "shortMessage": "feat: yeni özellikler"
+        },
+        "parents": [
+          "ad61596e7ec9e7a4b9a118af55e757fdefe1d74e"
+        ],
+        "sha": "600494786156d882b4cc0686168e390747c6bf51"
+      },
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787518000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787518000,
+            "offset": 0
+          }
+        },
+        "date": 1746787518000,
+        "message": {
+          "fullMessage": "feat: changelog yenileme için commit\n",
+          "shortMessage": "feat: changelog yenileme için commit"
+        },
+        "parents": [
+          "76aa68496a389b766bb5382aa049c63008ef3dc5"
+        ],
+        "sha": "ad61596e7ec9e7a4b9a118af55e757fdefe1d74e"
+      },
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787466000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1746787466000,
+            "offset": 0
+          }
+        },
+        "date": 1746787466000,
+        "message": {
+          "fullMessage": "feat: yeni özellik eklendi\n",
+          "shortMessage": "feat: yeni özellik eklendi"
+        },
+        "parents": [
+          "e6e5ffbf976a5b1ff4101448f123e9a3a1198155"
+        ],
+        "sha": "76aa68496a389b766bb5382aa049c63008ef3dc5"
+      }
+    ]
   },
   "releaseType": {
     "description": "Mainline releases",
-    "filterTags": "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$",
     "gitPush": "true",
     "gitTag": "true",
     "matchBranches": "^(master|main)$",
     "publish": "true"
   },
   "scheme": "SEMVER",
-  "timestamp": 1746787429321,
-  "version": "v1.0.0",
+  "timestamp": 1747031152772,
+  "version": "v1.1.0",
   "versionMajorNumber": "1",
-  "versionMinorNumber": "0",
+  "versionMinorNumber": "1",
   "versionPatchNumber": "0"
 }

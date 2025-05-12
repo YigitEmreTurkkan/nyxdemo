@@ -1,44 +1,21 @@
 preset: "simple"
 releasePrefix: "v"
 
-# Changelog yapılandırması - Tamamen yeniden yapılandırıldı
+# Changelog yapılandırması
 changelog:
   path: "CHANGELOG.md"
   append: true
   includeLatestRelease: true
-  sections:
-    "Features": "^feat$"
-    "Bug Fixes": "^fix$"
-    "Performance Improvements": "^perf$"
-    "Documentation": "^docs$"
   templates:
     default:
       content: |
         # Changelog
         {{#releases}}
         ## {{name}}{{#if date}} ({{date}}){{/if}}
-        {{#sections}}
-        ### {{name}}
-        {{#commits}}
-        * {{#if hash}}[{{hash}}] {{/if}}{{message}}{{#if author}} ({{author}}){{/if}}
-        {{/commits}}
-        {{/sections}}
+        {{#changes}}
+        * {{message}}
+        {{/changes}}
         {{/releases}}
-  substitutions:
-    "(?m)\\[([a-z0-9]+)\\](?s)": "[[%s](https://github.com/yourusername/nyx-demo/commit/%s)]"
-
-
-# Commit mesaj yapılandırması
-commitMessageConventions:
-  enabled:
-    - conventionalCommits
-  items:
-    conventionalCommits:
-      expression: "^(?<type>build|ci|docs|feat|fix|perf|refactor|test)(?:\\((?<scope>[^\\)]+)\\))?!?:(\\s|\\s\\n)(?<title>.+)$"
-      bumpExpressions:
-        feat: "minor"
-        fix: "patch"
-        breaking: "major"
 
 # Versiyonlama ayarları
 versioning:
@@ -50,73 +27,15 @@ versioning:
 releaseTypes:
   enabled:
     - mainline
-    - feature
-    - hotfix
-    - internal
-  publicationServices:
-    - github
   items:
     mainline:
       description: "Mainline releases"
-      filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)$"
       gitPush: true
       gitTag: true
       matchBranches: "^(master|main)$"
       publish: true
       bump:
         default: "patch"
-    
-    feature:
-      description: "Feature branch releases"
-      collapseVersions: true
-      collapsedVersionQualifier: "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}"
-      filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-(feat|feature)(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$"
-      gitPush: true
-      gitTag: true
-      matchBranches: "^(feat|feature)((-|\\/)[0-9a-zA-Z-_]+)?$"
-      publish: false
-      publishPreRelease: false
-      bump:
-        default: "minor"
-    
-    hotfix:
-      description: "Hotfix releases"
-      collapseVersions: true
-      collapsedVersionQualifier: "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}"
-      filterTags: "^({{configuration.releasePrefix}})?([0-9]\\d*)\\.([0-9]\\d*)\\.([0-9]\\d*)(-hotfix(([0-9a-zA-Z]*)(\\.([0-9]\\d*))?)?)$"
-      gitPush: true
-      gitTag: true
-      matchBranches: "^hotfix((-|\\/)[0-9a-zA-Z-_]+)?$"
-      publish: false
-      publishPreRelease: false
-      bump:
-        default: "patch"
-    
-    internal:
-      description: "Internal builds"
-      collapseVersions: true
-      collapsedVersionQualifier: "internal"
-      gitPush: false
-      gitTag: true
-      identifiers:
-        - qualifier: "{{#sanitizeLower}}{{branch}}{{/sanitizeLower}}"
-          position: "BUILD"
-        - qualifier: "{{#short5}}{{releaseScope.finalCommit}}{{/short5}}"
-          position: "BUILD"
-        - qualifier: "timestamp.{{#timestampYYYYMMDDHHMMSS}}{{timestamp}}{{/timestampYYYYMMDDHHMMSS}}"
-          position: "BUILD"
-      publish: false
-      publishPreRelease: false
-      bump:
-        default: "patch"
-
-# Servis yapılandırması
-services:
-  github:
-    type: "github"
-    options:
-      repository: "nyx-demo"
-      authentication: "token"
 
 resume: true
 stateFile: ".nyx-state.json"
