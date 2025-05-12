@@ -3,7 +3,7 @@
   "bump": "minor",
   "configuration": {
     "changelog": {
-      "append": "true",
+      "append": true,
       "path": "CHANGELOG.md",
       "sections": {},
       "substitutions": {}
@@ -70,7 +70,7 @@
     "infer.input.configured.scheme": "SEMVER",
     "infer.input.configured.version": "null",
     "infer.input.repository.current.branch": "main",
-    "infer.input.repository.last.commit": "594630862e0c1d101b26aa9d2e4029953b4751f6",
+    "infer.input.repository.last.commit": "e31e1ded3d355d17829210a3120af168fd9db876",
     "infer.output.state.version": "v1.1.0"
   },
   "latestVersion": true,
@@ -79,6 +79,37 @@
   "releaseAssets": [],
   "releaseScope": {
     "commits": [
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747031949000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747031949000,
+            "offset": 0
+          }
+        },
+        "date": 1747031949000,
+        "message": {
+          "fullMessage": "feat: new changes\n",
+          "shortMessage": "feat: new changes"
+        },
+        "parents": [
+          "594630862e0c1d101b26aa9d2e4029953b4751f6"
+        ],
+        "sha": "e31e1ded3d355d17829210a3120af168fd9db876"
+      },
       {
         "authorAction": {
           "identity": {
@@ -242,8 +273,8 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1747030612000,
-          "offset": 180
+          "timeStamp": 1747031949000,
+          "offset": 0
         }
       },
       "commitAction": {
@@ -252,19 +283,19 @@
           "name": "Yigit Emre TURKKAN"
         },
         "timeStamp": {
-          "timeStamp": 1747030612000,
-          "offset": 180
+          "timeStamp": 1747031949000,
+          "offset": 0
         }
       },
-      "date": 1747030612000,
+      "date": 1747031949000,
       "message": {
-        "fullMessage": "feat: yenilikler\n",
-        "shortMessage": "feat: yenilikler"
+        "fullMessage": "feat: new changes\n",
+        "shortMessage": "feat: new changes"
       },
       "parents": [
-        "cd677a26a6593fdcb8ab65e39ead24c03e09bdc3"
+        "594630862e0c1d101b26aa9d2e4029953b4751f6"
       ],
-      "sha": "594630862e0c1d101b26aa9d2e4029953b4751f6"
+      "sha": "e31e1ded3d355d17829210a3120af168fd9db876"
     },
     "initialCommit": {
       "authorAction": {
@@ -376,6 +407,37 @@
       "sha": "e6e5ffbf976a5b1ff4101448f123e9a3a1198155"
     },
     "significantCommits": [
+      {
+        "authorAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747031949000,
+            "offset": 0
+          }
+        },
+        "commitAction": {
+          "identity": {
+            "email": "yigit.turkkan@eteration.com",
+            "name": "Yigit Emre TURKKAN"
+          },
+          "timeStamp": {
+            "timeStamp": 1747031949000,
+            "offset": 0
+          }
+        },
+        "date": 1747031949000,
+        "message": {
+          "fullMessage": "feat: new changes\n",
+          "shortMessage": "feat: new changes"
+        },
+        "parents": [
+          "594630862e0c1d101b26aa9d2e4029953b4751f6"
+        ],
+        "sha": "e31e1ded3d355d17829210a3120af168fd9db876"
+      },
       {
         "authorAction": {
           "identity": {
